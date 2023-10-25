@@ -1,0 +1,10 @@
+<h2>Lista de usuarios</h2>
+
+<div class="row">
+  <div class="col pt-4">
+
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+    <user-table [users]="users"></user-table>
+
+  </div>
+</div>

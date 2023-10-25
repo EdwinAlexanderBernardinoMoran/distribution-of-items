@@ -1,0 +1,24 @@
+<div *ngIf="posts">
+  <div class="row">
+    <h2 class="text-center">Publicaciones</h2>
+    <div class="col-12 mt-5">
+
+
+      <ul>
+        <ng-container *ngFor="let post of posts">
+
+          <div class="card mt-2">
+            <div class="card-body m-2">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.body }}</p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              <div *ngIf="user">
+                <p><strong>Autor: </strong>{{ user.name }}</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
