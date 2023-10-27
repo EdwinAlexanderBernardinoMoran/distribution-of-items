@@ -70,12 +70,12 @@ class EstadoController extends Controller
 
     public function resumenObesidad(){
         // Calcular el estado con mayor índice de obesidad
-        $estadoMayorObesidad = collect($this->dataJson['features'])->max('properties.NAME');
         $indiceMayorObesidad = collect($this->dataJson['features'])->max('properties.Obesity');
+        $estadoMayorObesidad = collect($this->dataJson['features'])->firstWhere('properties.NAME', $indiceMayorObesidad);
 
         // Calcular el estado con menor índice de obesidad
-        $estadoMenorObesidad = collect($this->dataJson['features'])->min('properties.NAME');
         $indiceMenorObesidad = collect($this->dataJson['features'])->min('properties.Obesity');
+        $estadoMenorObesidad = collect($this->dataJson['features'])->firstWhere('properties.NAME', $indiceMenorObesidad);
 
         // Calcular el índice de obesidad promedio del país
         $indicePromedio = collect($this->dataJson['features'])->avg('properties.Obesity');
