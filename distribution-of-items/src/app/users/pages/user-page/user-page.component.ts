@@ -46,6 +46,28 @@ export class UserPageComponent implements OnInit{
         return this.posts = posts
       }
     )
+
+
+    // this.activatedRoute.params.pipe(
+    //   switchMap( ({id}) => this.UserService.getUserPost(id)),
+    // ).subscribe(
+    //   (post) => {
+
+    //     // this.searchCountry(id)
+
+    //     // this.CountriesService.searchContryByAlphaCode(id).subscribe(
+    //     //   country => {
+    //     //     console.log({country});
+    //     //   }
+    //     // )
+    //     // console.log({params: id});
+
+
+    //     // Si country no existe entonces lo sacare de la pagina
+    //     if (!post) return this.router.navigateByUrl('')
+    //     return this.posts = post;
+    //   }
+    // )
   }
 
 }

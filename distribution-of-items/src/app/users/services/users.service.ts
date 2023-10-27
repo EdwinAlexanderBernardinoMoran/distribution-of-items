@@ -16,13 +16,15 @@ export class UsersService {
   private getUsersRequest(url: string): Observable<User[]>{
     return this.http.get<User[]>(url).pipe(
       catchError(() => of([])),
-      delay(2000),
+      delay(100),
     )
   }
 
   getUserPost(id: string): Observable<Post[]>{
-    const urlUserPost = `${this.apiUrl}/${id}/posts`;
-    return this.http.get<Post[]>(urlUserPost);
+    const urlUserPost = `${this.apiUrl}/${id}/posts?access-token=9bd3545f6fd3e7f31983b75c6a3e9ca386db70db9e64006048e5079a99e1f365`;
+    return this.http.get<Post[]>(urlUserPost).pipe(
+      map(posts => posts.slice(0, 5))
+    );
   }
 
   getUser(id: string): Observable<User>{

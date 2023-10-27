@@ -6,6 +6,7 @@ import { UsersRoutingModule } from './users-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { UserTableComponent } from './components/user-table/user-table.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
+import { UserDetailComponent } from './pages/user-detail/user-detail.component';
 
 
 
@@ -14,7 +15,8 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
     UserListComponent,
     PostsListComponent,
     UserTableComponent,
-    UserPageComponent
+    UserPageComponent,
+    UserDetailComponent
   ],
   imports: [
     CommonModule,

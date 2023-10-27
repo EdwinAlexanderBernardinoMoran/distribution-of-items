@@ -1,0 +1,38 @@
+<div class="row">
+  <h2 class="text-center">Detalles Del Usuario</h2>
+
+  <ng-template #loading>
+    <div class="alert alert-info text-center">
+      Espere porfavor
+    </div>
+  </ng-template>
+
+  <div *ngIf="user; else loading" class="col-12 mt-2">
+    <div class="card mt-2">
+      <div class="card-body m-4">
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Gender</th>
+              <th>Status</th>
+              <!-- <th>Estado</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pt-2">{{ user.id }}</td>
+              <td class="pt-2">{{ user.name }}</td>
+              <td class="pt-2">{{ user.email }}</td>
+              <td class="pt-2">{{ user.gender }}</td>
+              <td class="pt-2">{{ user.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

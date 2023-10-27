@@ -1,0 +1,8 @@
+<div class="col-md-4">
+              <div class="form-group">
+                <div class="controls">
+                    <label style="font-family:Rubik, Helvetica, Arial, serif;font-weight: bold;">Programacion</label>
+                    <input readonly style="background:transparent!important;border:unset!important;box-shadow:unset!important;padding: 0;margin-top: -0.5rem;" type="text" class="form-control" id="ronda_programacion">
+                </div>
+              </div>
+            </div>
